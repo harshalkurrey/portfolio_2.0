@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshal Kurrey — Beyond The Interface | Portfolio 2.0</title>
+    <meta name="description" content="Portfolio of Harshal Kurrey — Computer Science student, Full Stack Developer, and Open Source Contributor. Explore projects, skills, education, experience, and creative experiments.">
+    <meta name="keywords" content="Harshal Kurrey, Portfolio, Full Stack Developer, Computer Science, Open Source, Web Development, Student Developer, Chhattisgarh, India">
+    <meta name="author" content="Harshal Kurrey">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harshalkurrey.github.io/portfolio/">
+    <meta property="og:title" content="Harshal Kurrey — Beyond The Interface">
+    <meta property="og:description" content="Futuristic, interactive developer portfolio showcasing software engineering, open source, and creative technology.">
+    <meta property="og:image" content="assets/portfolio_preview.png">
+
+    <!-- Fonts: Poppins (Headings Bold), Manrope (Body), JetBrains Mono (Technical) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons & Devicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Preload Hero Cosmic Background Artwork -->
+    <link rel="preload" as="image" href="assets/hero_cosmic_bg.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+    <!-- ─── CYBERNETIC LOADING EXPERIENCE ─── -->
+    <div id="loader-screen" class="loader-screen" aria-label="Loading Experience">
+        <div class="loader-backdrop">
+            <div class="loader-glow-orb"></div>
+            <div class="loader-grid-lines"></div>
+        </div>
+        
+        <div class="loader-content">
+            <!-- Glowing Monogram Logo -->
+            <div class="loader-brand-box">
+                <div class="loader-monogram-ring"></div>
+                <div class="loader-monogram">
+                    <span class="hk-glow">HK</span>
+                </div>
+            </div>
+
+            <div class="loader-text-group">
+                <h1 class="loader-title">HARSHAL KURREY</h1>
+                <p class="loader-tagline">I BUILD DIGITAL WORLDS</p>
+            </div>
+
+            <!-- Sleek Sci-Fi Progress Bar -->
+            <div class="loader-progress-container">
+                <div class="loader-progress-track">
+                    <div id="loader-progress-bar" class="loader-progress-bar" style="width: 0%;">
+                        <span class="loader-progress-head"></span>
+                    </div>
+                </div>
+                <div class="loader-progress-meta">
+                    <span id="loader-status-text" class="loader-status-text">INITIALIZING QUANTUM CORE...</span>
+                    <span id="loader-counter" class="loader-counter">0%</span>
+                </div>
+            </div>
+
+            <!-- Bottom Mission Indicators -->
+            <div class="loader-pillars">
+                <span class="pillar-item active"><span class="pillar-dot"></span> IDEAS</span>
+                <span class="pillar-divider">/</span>
+                <span class="pillar-item"><span class="pillar-dot"></span> CODE</span>
+                <span class="pillar-divider">/</span>
+                <span class="pillar-item"><span class="pillar-dot"></span> DESIGN</span>
+                <span class="pillar-divider">/</span>
+                <span class="pillar-item"><span class="pillar-dot"></span> IMPACT</span>
+            </div>
+
+            <button type="button" id="loader-skip-btn" class="loader-skip-btn" aria-label="Skip loading animation">
+                CLICK OR PRESS ANY KEY TO ENTER <i class="fa-solid fa-angles-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ─── GLOBAL FIXED COSMIC BACKGROUND ─── -->
+    <div id="global-cosmic-bg" class="global-cosmic-bg" aria-hidden="true">
+        <!-- Background Artwork Layer (fixed for entire site) -->
+        <picture>
+            <source srcset="assets/hero_cosmic_bg.webp" type="image/webp">
+            <img src="assets/hero_cosmic_bg.jpg" alt="" class="global-cosmic-bg-img" fetchpriority="high" loading="eager" decoding="async">
+        </picture>
+        <!-- Ambient shifting nebula glow -->
+        <div class="global-ambient-nebula"></div>
+        <!-- Dark overlay for readability -->
+        <div class="global-cosmic-overlay"></div>
+        <!-- Animated particle canvas -->
+        <canvas id="stars-canvas"></canvas>
+        <!-- Nebula glow orbs -->
+        <div class="nebula-glow nebula-top-left"></div>
+        <div class="nebula-glow nebula-center-right"></div>
+        <div class="nebula-glow nebula-bottom-left"></div>
+        <!-- Cyber grid -->
+        <div class="cyber-grid-overlay"></div>
+    </div>
+
+    <!-- Marginal Editorial Labels -->
+    <aside class="side-annotation side-left" aria-hidden="true">
+        <span>CODE / CREATE / CONTRIBUTE</span>
+    </aside>
+    <aside class="side-annotation side-right" aria-hidden="true">
+        <span>✦ BUILD · LEARN · GROW</span>
+    </aside>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+    <!-- ─── 00. GLOBAL NAVIGATION ─── -->
+    <header class="site-header" id="site-header">
+        <div class="nav-container">
+            <a href="#home" class="brand-monogram" aria-label="Harshal Kurrey Home">
+                <span class="hk-symbol-logo">harshal<span class="hk-accent-dot">.</span>kurrey</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Journey</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <a href="#contact" class="btn-talk" id="btn-talk-cta">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span class="btn-text">Let's Talk</span>
+                </a>
+                
+                <!-- Mobile Hamburger Toggle -->
+                <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <div class="mobile-menu-header">
+                <span class="hk-symbol-logo">harshal<span class="hk-accent-dot">.</span>kurrey</span>
+                <button type="button" class="mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link"><span class="num">01</span> Home</a></li>
+                <li><a href="#about" class="mobile-nav-link"><span class="num">02</span> About</a></li>
+                <li><a href="#skills" class="mobile-nav-link"><span class="num">03</span> Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link"><span class="num">04</span> Projects</a></li>
+                <li><a href="#experience" class="mobile-nav-link"><span class="num">05</span> Experience</a></li>
+                <li><a href="#education" class="mobile-nav-link"><span class="num">06</span> Education</a></li>
+                <li><a href="#certificates" class="mobile-nav-link"><span class="num">07</span> Certificates</a></li>
+                <li><a href="#creativelab" class="mobile-nav-link"><span class="num">08</span> Creative Lab</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><span class="num">09</span> Contact</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <a href="assets/HARSHAL_Resume_Final.pdf" download class="btn-download-resume mobile-resume-btn" target="_blank">
+                    <i class="fa-solid fa-file-arrow-down"></i> Resume PDF
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ─── 01. PAGE 01 — CINEMATIC HOME ─── -->
+        <section id="home" class="section hero-section" aria-label="Hero">
+
+            <div class="hero-wrapper">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-target-dot"></span>
+                        <span class="eyebrow-text">HELLO, I'M</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="name-harshal">HARSHAL</span>
+                        <span class="name-kurrey">KURREY</span>
+                    </h1>
+
+                    <div class="hero-tagline-wrapper">
+                        <span class="hero-tagline">I BUILD DIGITAL WORLDS. <span class="role-terminal-cursor">|</span></span>
+                    </div>
+
+                    <p class="hero-desc">
+                        A Computer Science student exploring software engineering, open source, and creative technology — turning ideas into useful digital experiences.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn-ref-primary">
+                            <span>Explore My Work</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn-ref-secondary">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Let's Connect</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Mini Dock -->
+                    <div class="hero-social-dock">
+                        <a href="https://github.com/harshalkurrey" target="_blank" rel="noopener noreferrer" class="social-glass-btn" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/harshalkurrey" target="_blank" rel="noopener noreferrer" class="social-glass-btn" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://leetcode.com/u/harshalkurrey/" target="_blank" rel="noopener noreferrer" class="social-glass-btn" aria-label="LeetCode Profile"><i class="fa-solid fa-code"></i></a>
+                        <a href="mailto:rahulkurrey321@gmail.com" class="social-glass-btn" aria-label="Email Me"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+
+                    <!-- Bottom Info Bar -->
+                    <div class="hero-bottom-info-bar liquid-glass-card">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="info-text">
+                                <span class="info-title">CSE Student</span>
+                                <span class="info-sub">Rungta College</span>
+                            </div>
+                        </div>
+                        <div class="info-divider"></div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="info-text">
+                                <span class="info-title">Open Source</span>
+                                <span class="info-sub">Contributor</span>
+                            </div>
+                        </div>
+                        <div class="info-divider"></div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="info-text">
+                                <span class="info-title">Always Learning</span>
+                                <span class="info-sub">Building Better</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Currently Building Card -->
+                <div class="hero-visual-container" id="hero-orbital-wrapper">
+                    <div class="currently-building-card liquid-glass-card">
+                        <div class="cb-header">
+                            <span class="status-pulse-dot"></span>
+                            <span class="cb-label">Currently Building</span>
+                        </div>
+                        <div class="cb-project-info">
+                            <div class="cb-project-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="cb-project-details">
+                                <h3 class="cb-project-name">Campus Care <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+                                <p class="cb-project-desc">A campus service platform to connect students, resources, and opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="cb-tech-badges">
+                            <span class="cb-tech-badge">React</span>
+                            <span class="cb-tech-badge">Spring Boot</span>
+                            <span class="cb-tech-badge">MySQL</span>
+                        </div>
+                        <div class="cb-project-stats">
+                            <div class="cb-stat-item">
+                                <span class="cb-stat-num">10+</span>
+                                <span class="cb-stat-label">Projects</span>
+                            </div>
+                            <div class="cb-stat-item">
+                                <span class="cb-stat-num">3+</span>
+                                <span class="cb-stat-label">Open Source</span>
+                            </div>
+                            <div class="cb-stat-item">
+                                <span class="cb-stat-num">2+</span>
+                                <span class="cb-stat-label">Communities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="hero-scroll-cue-wrap">
+                <a href="#about" class="hero-scroll-cue" aria-label="Scroll to explore">
+                    <span class="mouse-icon">
+                        <span class="wheel-dot"></span>
+                    </span>
+                    <span class="scroll-text">SCROLL TO EXPLORE</span>
+                    <i class="fa-solid fa-chevron-down scroll-chevron"></i>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ─── 02. PAGE 02 — ABOUT ─── -->
+        <section id="about" class="section about-section" aria-label="About Me">
+            <div class="section-container">
+                <div class="section-heading-block">
+                    <div class="section-tag">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <span>02 // ABOUT ME</span>
+                    </div>
+                    <h2 class="section-title">
+                        A CURIOUS BUILDER FROM<br>
+                        <span class="gradient-text">CHHATTISGARH</span>
+                    </h2>
+                </div>
+
+                <div class="about-liquid-grid">
+                    <!-- Left: Bio & Story Pills -->
+                    <div class="about-story-col">
+                        <p class="about-lead-text">
+                            I'm <strong>Harshal</strong>, a Computer Science student passionate about building real-world projects, exploring open source, and learning new technologies. I enjoy turning ideas into useful digital experiences.
+                        </p>
+                        <p class="about-sub-text">
+                            Currently pursuing B.Tech in CSE at Rungta College of Engineering &amp; Technology. Focused on crafting responsive, performant web applications with clean code, modern architectures, and real-world utility.
+                        </p>
+
+                        <div class="about-story-pills">
+                            <div class="liquid-glass-card story-pill-card">
+                                <span class="story-pill-title">LEARNING</span>
+                                <span class="story-pill-sub">Always</span>
+                            </div>
+                            <div class="liquid-glass-card story-pill-card">
+                                <span class="story-pill-title">BUILDING</span>
+                                <span class="story-pill-sub">Real Projects</span>
+                            </div>
+                            <div class="liquid-glass-card story-pill-card">
+                                <span class="story-pill-title">CONTRIBUTING</span>
+                                <span class="story-pill-sub">Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center: Arched Liquid Glass Portrait Frame -->
+                    <div class="about-frame-col">
+                        <div class="about-liquid-frame">
+                            <div class="about-frame-img-wrap">
+                                <img src="assets/about_explorer.jpg" alt="Harshal Kurrey - Beyond The Interface" class="about-frame-img" loading="lazy">
+                            </div>
+                            <div class="frame-glass-badge">
+                                <span class="frame-hk-glow">HK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stacked Liquid Glass Role Badges -->
+                    <div class="about-roles-col">
+                        <div class="liquid-glass-card role-glass-pill">
+                            <div class="role-pill-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="role-pill-info">
+                                <span class="role-pill-text">Student</span>
+                                <span class="role-pill-sub">B.Tech CSE (Full Stack)</span>
+                            </div>
+                        </div>
+                        <div class="liquid-glass-card role-glass-pill">
+                            <div class="role-pill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="role-pill-info">
+                                <span class="role-pill-text">Developer</span>
+                                <span class="role-pill-sub">Web &amp; Full Stack</span>
+                            </div>
+                        </div>
+                        <div class="liquid-glass-card role-glass-pill">
+                            <div class="role-pill-icon"><i class="fa-solid fa-code-branch"></i></div>
+                            <div class="role-pill-info">
+                                <span class="role-pill-text">Open Source Contributor</span>
+                                <span class="role-pill-sub">GSSoC &amp; NSoC &amp; OSCG</span>
+                            </div>
+                        </div>
+                        <div class="liquid-glass-card role-glass-pill">
+                            <div class="role-pill-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="role-pill-info">
+                                <span class="role-pill-text">Tech Explorer</span>
+                                <span class="role-pill-sub">DSA &amp; Modern Frameworks</span>
+                            </div>
+                        </div>
+                        <div class="liquid-glass-card role-glass-pill">
+                            <div class="role-pill-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                            <div class="role-pill-info">
+                                <span class="role-pill-text">Problem Solver</span>
+                                <span class="role-pill-sub">Analytical Mindset</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ─── 03. PAGE 03 — SKILLS & TECHNOLOGY ─── -->
+        <section id="skills" class="section skills-section" aria-label="Skills and Technology">
+            <div class="section-container">
+                <div class="liquid-section-heading">
+                    <div class="liquid-badge">
+                        <span class="badge-dot"></span>
+                        <span>MY SKILLS</span>
+                    </div>
+                    <h2 class="liquid-title">Technologies I Work With</h2>
+                    <p class="liquid-subtitle">
+                        A mix of programming, web development, databases, and tools I use to build and learn continuously.
+                    </p>
+                </div>
+
+                <!-- 3D Rotating Liquid Glass Stage (Reference Panel 3) -->
+                <div class="skills-stage-3d-wrap">
+                    <button type="button" class="liquid-nav-arrow arrow-left" id="skills-prev-btn" aria-label="Previous skill">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="skills-cards-stage" id="skills-cards-stage">
+                        <!-- Card 1: Programming -->
+                        <div class="liquid-glass-card skill-glass-card" data-index="0">
+                            <div class="skill-icon-halo">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <h3 class="skill-card-title">Programming</h3>
+                            <div class="skill-card-items">
+                                <p class="skill-row-primary">Java • Python • C</p>
+                                <p class="skill-row-secondary">C++ • DSA</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Web Development (Center / Active) -->
+                        <div class="liquid-glass-card skill-glass-card active-card" data-index="1">
+                            <div class="skill-icon-halo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h3 class="skill-card-title">Web Development</h3>
+                            <div class="skill-card-items">
+                                <p class="skill-row-primary">HTML • CSS • JavaScript</p>
+                                <p class="skill-row-secondary">React • Tailwind CSS</p>
+                            </div>
+                            <a href="#projects" class="skill-card-cta">
+                                <span>Explore</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <!-- Card 3: Databases -->
+                        <div class="liquid-glass-card skill-glass-card" data-index="2">
+                            <div class="skill-icon-halo">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h3 class="skill-card-title">Databases</h3>
+                            <div class="skill-card-items">
+                                <p class="skill-row-primary">MySQL • MongoDB</p>
+                                <p class="skill-row-secondary">PostgreSQL</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Tools & Version Control -->
+                        <div class="liquid-glass-card skill-glass-card" data-index="3">
+                            <div class="skill-icon-halo">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 class="skill-card-title">Tools &amp; DevOps</h3>
+                            <div class="skill-card-items">
+                                <p class="skill-row-primary">Git • GitHub • VS Code</p>
+                                <p class="skill-row-secondary">IntelliJ IDEA • Netlify</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Design & Analytics -->
+                        <div class="liquid-glass-card skill-glass-card" data-index="4">
+                            <div class="skill-icon-halo">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <h3 class="skill-card-title">Design &amp; Analytics</h3>
+                            <div class="skill-card-items">
+                                <p class="skill-row-primary">Photoshop • Canva • NumPy</p>
+                                <p class="skill-row-secondary">CorelDraw • Tally ERP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="liquid-nav-arrow arrow-right" id="skills-next-btn" aria-label="Next skill">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Reflective Pedestal Glow Beneath -->
+                    <div class="skills-pedestal-beam" aria-hidden="true"></div>
+                </div>
+
+                <!-- Toggle to reveal full categorized tech stack -->
+                <div class="skills-drawer-toggle-row">
+                    <button type="button" class="btn-secondary-glass btn-toggle-drawer" id="btn-toggle-skills-drawer">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span id="skills-toggle-label">View Complete Tech Stack</span>
+                    </button>
+                </div>
+
+                <!-- Collapsible Complete Skill Badges Matrix -->
+                <div class="skills-full-matrix-drawer" id="skills-full-matrix-drawer" style="display: none;">
+                    <div class="skill-categories-col">
+                        <!-- Category 1: Languages -->
+                        <div class="skill-panel">
+                            <div class="panel-header">
+                                <div class="panel-icon"><i class="fa-solid fa-code"></i></div>
+                                <h3 class="panel-title">Languages</h3>
+                            </div>
+                            <div class="skill-pills">
+                                <span class="tech-badge"><i class="devicon-java-plain colored"></i> Java</span>
+                                <span class="tech-badge"><i class="devicon-python-plain colored"></i> Python</span>
+                                <span class="tech-badge"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                                <span class="tech-badge"><i class="devicon-c-plain colored"></i> C</span>
+                                <span class="tech-badge"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            </div>
+                        </div>
+
+                        <!-- Category 2: Web Technologies -->
+                        <div class="skill-panel">
+                            <div class="panel-header">
+                                <div class="panel-icon"><i class="fa-solid fa-globe"></i></div>
+                                <h3 class="panel-title">Web Technologies</h3>
+                            </div>
+                            <div class="skill-pills">
+                                <span class="tech-badge"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                                <span class="tech-badge"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                                <span class="tech-badge"><i class="devicon-javascript-plain colored"></i> Modern JS</span>
+                                <span class="tech-badge"><i class="devicon-react-original colored"></i> React</span>
+                                <span class="tech-badge"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+                            </div>
+                        </div>
+
+                        <!-- Category 3: Databases -->
+                        <div class="skill-panel">
+                            <div class="panel-header">
+                                <div class="panel-icon"><i class="fa-solid fa-database"></i></div>
+                                <h3 class="panel-title">Databases</h3>
+                            </div>
+                            <div class="skill-pills">
+                                <span class="tech-badge"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                                <span class="tech-badge"><i class="fa-solid fa-table"></i> Relational SQL</span>
+                                <span class="tech-badge"><i class="devicon-mongodb-plain colored"></i> MongoDB (Basics)</span>
+                            </div>
+                        </div>
+
+                        <!-- Category 4: Tools & Version Control -->
+                        <div class="skill-panel">
+                            <div class="panel-header">
+                                <div class="panel-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                                <h3 class="panel-title">Tools &amp; Version Control</h3>
+                            </div>
+                            <div class="skill-pills">
+                                <span class="tech-badge"><i class="devicon-git-plain colored"></i> Git</span>
+                                <span class="tech-badge"><i class="devicon-github-original"></i> GitHub</span>
+                                <span class="tech-badge"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                                <span class="tech-badge"><i class="devicon-intellij-plain colored"></i> IntelliJ IDEA</span>
+                                <span class="tech-badge"><i class="fa-solid fa-cloud"></i> Netlify</span>
+                            </div>
+                        </div>
+
+                        <!-- Category 5: Design, Graphics & Libraries -->
+                        <div class="skill-panel">
+                            <div class="panel-header">
+                                <div class="panel-icon"><i class="fa-solid fa-palette"></i></div>
+                                <h3 class="panel-title">Design &amp; Productivity</h3>
+                            </div>
+                            <div class="skill-pills">
+                                <span class="tech-badge"><i class="devicon-photoshop-plain colored"></i> Photoshop</span>
+                                <span class="tech-badge"><i class="devicon-canva-original colored"></i> Canva</span>
+                                <span class="tech-badge"><i class="devicon-numpy-plain colored"></i> NumPy</span>
+                                <span class="tech-badge"><i class="fa-solid fa-vector-square"></i> CorelDraw</span>
+                                <span class="tech-badge"><i class="fa-solid fa-receipt"></i> Tally ERP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ─── 04. PAGE 04 — PROJECT SHOWCASE ─── -->
+        <section id="projects" class="section projects-section" aria-label="Projects Showcase">
+            <div class="section-container">
+                <div class="projects-header-flex">
+                    <div class="liquid-section-heading">
+                        <div class="liquid-badge">
+                            <span class="badge-dot"></span>
+                            <span>FEATURED PROJECTS</span>
+                        </div>
+                        <h2 class="liquid-title">Projects That Turn Ideas Into Reality</h2>
+                        <p class="liquid-subtitle">
+                            A collection of projects I've built while learning, exploring, and contributing.
+                        </p>
+                    </div>
+                    <div class="projects-header-action">
+                        <button type="button" class="btn-liquid-pill" id="btn-toggle-all-projects">
+                            <span id="all-projects-toggle-text">View All Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3 Cinematic Liquid Glass Cards (Reference Panel 4) -->
+                <div class="cinematic-projects-grid">
+                    <!-- Project 01: Campus Care -->
+                    <article class="liquid-glass-card cinematic-project-card">
+                        <div class="cinematic-badge-top">
+                            <span class="proj-pill full-stack">Full Stack</span>
+                        </div>
+                        <div class="cinematic-preview-frame">
+                            <img src="assets/campuscare_mockup.jpg" alt="Campus Care Academic Platform Preview" loading="lazy">
+                        </div>
+                        <div class="cinematic-body">
+                            <h3 class="cinematic-title">Campus Care</h3>
+                            <p class="cinematic-desc">
+                                A campus service platform to connect students, resources, and opportunities.
+                            </p>
+                            <div class="cinematic-tags">
+                                <span class="c-tag">React</span>
+                                <span class="c-tag">Spring Boot</span>
+                                <span class="c-tag">MySQL</span>
+                            </div>
+                            <div class="cinematic-footer">
+                                <a href="https://harshalkurrey.github.io/campuscare/" target="_blank" rel="noopener noreferrer" class="cinematic-link">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <button type="button" class="cinematic-case-study-btn open-case-study" data-project="campuscare" aria-label="Open Campus Care Case Study">
+                                    <i class="fa-solid fa-book-open"></i> Case Study
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 02: JugaadLang -->
+                    <article class="liquid-glass-card cinematic-project-card">
+                        <div class="cinematic-badge-top">
+                            <span class="proj-pill open-source">Open Source</span>
+                        </div>
+                        <div class="cinematic-preview-frame">
+                            <img src="assets/jugaadlang_preview.jpg" alt="JugaadLang Hindi Keyword Programming Language Preview" loading="lazy">
+                        </div>
+                        <div class="cinematic-body">
+                            <h3 class="cinematic-title">JugaadLang</h3>
+                            <p class="cinematic-desc">
+                                A Hindi-keyword programming language for beginners.
+                            </p>
+                            <div class="cinematic-tags">
+                                <span class="c-tag">Python</span>
+                                <span class="c-tag">Open Source</span>
+                                <span class="c-tag">CLI</span>
+                            </div>
+                            <div class="cinematic-footer">
+                                <a href="https://github.com/harshalkurrey" target="_blank" rel="noopener noreferrer" class="cinematic-link">
+                                    <span>View on Github</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 03: Harshal World -->
+                    <article class="liquid-glass-card cinematic-project-card">
+                        <div class="cinematic-badge-top">
+                            <span class="proj-pill web-app">Web App</span>
+                        </div>
+                        <div class="cinematic-preview-frame">
+                            <img src="assets/harshal_world.png" alt="Harshal World Personal Website Preview" loading="lazy">
+                        </div>
+                        <div class="cinematic-body">
+                            <h3 class="cinematic-title">Harshal World</h3>
+                            <p class="cinematic-desc">
+                                My personal website to showcase my journey and work.
+                            </p>
+                            <div class="cinematic-tags">
+                                <span class="c-tag">HTML</span>
+                                <span class="c-tag">CSS</span>
+                                <span class="c-tag">JavaScript</span>
+                            </div>
+                            <div class="cinematic-footer">
+                                <a href="https://harshalkurrey.github.io/Harshal-World/" target="_blank" rel="noopener noreferrer" class="cinematic-link">
+                                    <span>Live Demo</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Collapsible Remaining Projects Grid -->
+                <div class="more-projects-drawer" id="more-projects-drawer" style="display: none;">
+                    <div class="drawer-inner-grid">
+                        <!-- Project 04: Aditya Computer Academy -->
+                        <article class="liquid-glass-card cinematic-project-card">
+                            <div class="cinematic-badge-top">
+                                <span class="proj-pill web-app">Institutional</span>
+                            </div>
+                            <div class="cinematic-body">
+                                <h3 class="cinematic-title">Aditya Computer Academy</h3>
+                                <p class="cinematic-desc">
+                                    Modern institutional portal showcasing computer courses, faculty records, student statistics, and contact channels.
+                                </p>
+                                <div class="cinematic-tags">
+                                    <span class="c-tag">HTML5</span>
+                                    <span class="c-tag">CSS3</span>
+                                    <span class="c-tag">JavaScript</span>
+                                </div>
+                                <div class="cinematic-footer">
+                                    <a href="https://harshalkurrey.github.io/adityacomputeracademy/" target="_blank" rel="noopener noreferrer" class="cinematic-link">
+                                        <span>Live Demo</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 05: Open Source Contributions -->
+                        <article class="liquid-glass-card cinematic-project-card">
+                            <div class="cinematic-badge-top">
+                                <span class="proj-pill open-source">Open Source</span>
+                            </div>
+                            <div class="cinematic-body">
+                                <h3 class="cinematic-title">Open Source Contributions</h3>
+                                <p class="cinematic-desc">
+                                    Collaborative issues resolved across GirlScript Summer of Code (GSSoC 2026), Nexus Spring of Code (NSoC 2026), and Open Source Connect Global.
+                                </p>
+                                <div class="cinematic-tags">
+                                    <span class="c-tag">Pull Requests</span>
+                                    <span class="c-tag">Git Workflows</span>
+                                    <span class="c-tag">Open Source</span>
+                                </div>
+                                <div class="cinematic-footer">
+                                    <a href="https://github.com/harshalkurrey" target="_blank" rel="noopener noreferrer" class="cinematic-link">
+                                        <span>View GitHub</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 06: Portfolio 2.0 -->
+                        <article class="liquid-glass-card cinematic-project-card">
+                            <div class="cinematic-badge-top">
+                                <span class="proj-pill web-app">2.0 Architecture</span>
+                            </div>
+                            <div class="cinematic-body">
+                                <h3 class="cinematic-title">Portfolio 2.0 — Beyond The Interface</h3>
+                                <p class="cinematic-desc">
+                                    Liquid-glass cosmic UI engineered with deep translucent glassmorphism, 3D tilt interactions, and reactive layout modules.
+                                </p>
+                                <div class="cinematic-tags">
+                                    <span class="c-tag">Liquid Glass</span>
+                                    <span class="c-tag">Vanilla CSS3</span>
+                                    <span class="c-tag">Interactive 3D</span>
+                                </div>
+                                <div class="cinematic-footer">
+                                    <a href="#home" class="cinematic-link">
+                                        <span>Current Experience</span>
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ─── 05. PAGE 05 — PROJECT CASE STUDY (MODAL & DETAIL VIEW) ─── -->
+        <div class="case-study-modal" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="cs-title" aria-hidden="true">
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-dialog">
+                <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="modal-header">
+                    <a href="#projects" class="modal-back-btn" id="modal-back-link">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Projects
+                    </a>
+                    <div class="cs-badge-row">
+                        <span class="live-status-pill"><span class="status-pulse-dot"></span> CASE STUDY</span>
+                    </div>
+                    <h3 class="cs-title" id="cs-title">CAMPUS CARE</h3>
+                    <p class="cs-subtitle">Full Stack Academic Management & Student Care Platform</p>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Showcase Banner Image -->
+                    <div class="cs-banner-wrap">
+                        <img src="assets/campuscare_mockup.jpg" alt="Campus Care System Multi-Screen Display" class="cs-banner-img">
+                    </div>
+
+                    <!-- Tech Badges -->
+                    <div class="cs-tech-badges">
+                        <span class="tech-badge"><i class="devicon-react-original colored"></i> React</span>
+                        <span class="tech-badge"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+                        <span class="tech-badge"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                        <span class="tech-badge"><i class="fa-solid fa-shield-halved"></i> JWT Security</span>
+                        <span class="tech-badge"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="cs-actions-bar">
+                        <a href="https://harshalkurrey.github.io/campuscare/" target="_blank" rel="noopener noreferrer" class="btn-primary-glow">
+                            <span>Live Demo</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://github.com/harshalkurrey" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass">
+                            <i class="fa-brands fa-github"></i>
+                            <span>View Source</span>
+                        </a>
+                    </div>
+
+                    <!-- Detailed Content Grid -->
+                    <div class="cs-details-grid">
+                        <div class="cs-detail-box">
+                            <h4><i class="fa-solid fa-bullseye"></i> The Problem Being Solved</h4>
+                            <p>
+                                Traditional college administrative workflows often suffer from delayed grievance resolutions, cumbersome attendance tracking, and lack of anonymity for sensitive feedback. Students frequently hesitate to report genuine campus concerns due to lack of confidential channels.
+                            </p>
+                        </div>
+
+                        <div class="cs-detail-box">
+                            <h4><i class="fa-solid fa-user-gear"></i> My Role & Architectural Approach</h4>
+                            <p>
+                                Designed and engineered the user-centric interface and frontend component structure. Focused on intuitive student dashboards, zero-fear anonymous complaint submission pipelines, automated status trackers, and accessible attendance overviews.
+                            </p>
+                        </div>
+
+                        <div class="cs-detail-box">
+                            <h4><i class="fa-solid fa-microchip"></i> Key Implementation Features</h4>
+                            <ul>
+                                <li><strong>Confidential Grievance Portal:</strong> Secure submission with zero fear of identity leakage.</li>
+                                <li><strong>Attendance & Analytics:</strong> Visual performance metrics and semester summaries.</li>
+                                <li><strong>Real-time Notice Board:</strong> Instant notifications for exams, schedules, and club events.</li>
+                                <li><strong>Administrative Role-Based Flow:</strong> Streamlined triaging and feedback rating.</li>
+                            </ul>
+                        </div>
+
+                        <div class="cs-detail-box">
+                            <h4><i class="fa-solid fa-lightbulb"></i> Learning Outcomes & Key Takeaways</h4>
+                            <p>
+                                Solidified real-world full-stack development patterns, responsive state handling, clean modular code separation, and prioritized UX accessibility for educational users.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ─── 06. PAGE 06 — EXPERIENCE & ACHIEVEMENTS ─── -->
+        <section id="experience" class="section experience-section" aria-label="Experience and Achievements">
+            <div class="section-container">
+                <div class="liquid-section-heading">
+                    <div class="liquid-badge">
+                        <span class="badge-dot"></span>
+                        <span>MY JOURNEY</span>
+                    </div>
+                    <h2 class="liquid-title">Experience &amp; Contributions</h2>
+                    <p class="liquid-subtitle">
+                        A timeline of my open source contributions, internships, and achievements.
+                    </p>
+                </div>
+
+                <!-- Liquid Glass Vertical Timeline (Reference Panel 5) -->
+                <div class="liquid-timeline-container">
+                    <div class="liquid-timeline-track">
+
+                        <!-- Item 1: Open Source India 2026 -->
+                        <div class="liquid-timeline-row">
+                            <div class="timeline-date-col">
+                                <span class="timeline-date-pill">2026 - Present</span>
+                            </div>
+                            <div class="timeline-node-col">
+                                <div class="timeline-node-dot">
+                                    <i class="fa-solid fa-code-fork"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-card-col">
+                                <div class="liquid-glass-card timeline-glass-card">
+                                    <div class="timeline-card-content">
+                                        <h3 class="timeline-item-title">Open Source India 2026</h3>
+                                        <p class="timeline-item-sub">Contributor + Project Admin</p>
+                                    </div>
+                                    <div class="timeline-badge-wrap">
+                                        <span class="timeline-glass-pill pill-blue">Open Source</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: ICPC Asia West Amritapuri Regional 2026 -->
+                        <div class="liquid-timeline-row">
+                            <div class="timeline-date-col">
+                                <span class="timeline-date-pill">2026 - Present</span>
+                            </div>
+                            <div class="timeline-node-col">
+                                <div class="timeline-node-dot">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-card-col">
+                                <div class="liquid-glass-card timeline-glass-card">
+                                    <div class="timeline-card-content">
+                                        <h3 class="timeline-item-title">ICPC Asia West Amritapuri Regional 2026</h3>
+                                        <p class="timeline-item-sub">Institutional Ambassador</p>
+                                    </div>
+                                    <div class="timeline-badge-wrap">
+                                        <span class="timeline-glass-pill pill-cyan">Ambassador</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Nexus Spring of Code (NSoC 2026) -->
+                        <div class="liquid-timeline-row">
+                            <div class="timeline-date-col">
+                                <span class="timeline-date-pill">Apr 2026 - Jun 2026</span>
+                            </div>
+                            <div class="timeline-node-col">
+                                <div class="timeline-node-dot">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-card-col">
+                                <div class="liquid-glass-card timeline-glass-card">
+                                    <div class="timeline-card-content">
+                                        <h3 class="timeline-item-title">NSoC 2026</h3>
+                                        <p class="timeline-item-sub">Project Admin + Contributor</p>
+                                    </div>
+                                    <div class="timeline-badge-wrap">
+                                        <span class="timeline-glass-pill pill-blue">Open Source</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: InAmigos Foundation -->
+                        <div class="liquid-timeline-row">
+                            <div class="timeline-date-col">
+                                <span class="timeline-date-pill">Jan 2026 - Feb 2026</span>
+                            </div>
+                            <div class="timeline-node-col">
+                                <div class="timeline-node-dot">
+                                    <i class="fa-solid fa-palette"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-card-col">
+                                <div class="liquid-glass-card timeline-glass-card">
+                                    <div class="timeline-card-content">
+                                        <h3 class="timeline-item-title">InAmigos Foundation</h3>
+                                        <p class="timeline-item-sub">Graphic Designing Intern</p>
+                                    </div>
+                                    <div class="timeline-badge-wrap">
+                                        <span class="timeline-glass-pill pill-purple">Internship</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: GirlScript Summer of Code (GSSoC 2026) -->
+                        <div class="liquid-timeline-row">
+                            <div class="timeline-date-col">
+                                <span class="timeline-date-pill">2026</span>
+                            </div>
+                            <div class="timeline-node-col">
+                                <div class="timeline-node-dot">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-card-col">
+                                <div class="liquid-glass-card timeline-glass-card">
+                                    <div class="timeline-card-content">
+                                        <h3 class="timeline-item-title">GirlScript Summer of Code (GSSoC 2026)</h3>
+                                        <p class="timeline-item-sub">Contributor + Campus Ambassador</p>
+                                    </div>
+                                    <div class="timeline-badge-wrap">
+                                        <span class="timeline-glass-pill pill-blue">Open Source</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6: Cognizance 2026 — IIT Roorkee -->
+                        <div class="liquid-timeline-row">
+                            <div class="timeline-date-col">
+                                <span class="timeline-date-pill">2026</span>
+                            </div>
+                            <div class="timeline-node-col">
+                                <div class="timeline-node-dot">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-card-col">
+                                <div class="liquid-glass-card timeline-glass-card">
+                                    <div class="timeline-card-content">
+                                        <h3 class="timeline-item-title">Cognizance 2026 — IIT Roorkee</h3>
+                                        <p class="timeline-item-sub">Campus Ambassador</p>
+                                    </div>
+                                    <div class="timeline-badge-wrap">
+                                        <span class="timeline-glass-pill pill-cyan">Leadership</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Verified Milestones Badges Strip -->
+                <div class="timeline-milestones-row">
+                    <div class="liquid-glass-card milestone-pill-card">
+                        <i class="fa-solid fa-code"></i>
+                        <span>GSSoC &amp; NSoC Selected</span>
+                    </div>
+                    <div class="liquid-glass-card milestone-pill-card">
+                        <i class="fa-solid fa-award"></i>
+                        <span>ICPC Regional Ambassador</span>
+                    </div>
+                    <div class="liquid-glass-card milestone-pill-card">
+                        <i class="fa-solid fa-medal"></i>
+                        <span>IIT Roorkee Ambassador</span>
+                    </div>
+                    <div class="liquid-glass-card milestone-pill-card">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span>Hackathon Builder</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ─── 07. PAGE 07 — EDUCATION ─── -->
+        <section id="education" class="section education-section" aria-label="Education">
+            <div class="section-container">
+                <div class="liquid-section-heading">
+                    <div class="liquid-badge">
+                        <span class="badge-dot"></span>
+                        <span>EDUCATION</span>
+                    </div>
+                    <h2 class="liquid-title">My Academic Journey</h2>
+                    <p class="liquid-subtitle">
+                        From school to college, building a strong foundation.
+                    </p>
+                </div>
+
+                <!-- Modern Dome-Topped Liquid Glass Cards (Reference Panel 6) -->
+                <div class="education-dome-grid">
+
+                    <!-- Milestone 1: B.Tech in CSE -->
+                    <div class="liquid-glass-card edu-dome-card">
+                        <div class="dome-arch-badge">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="dome-card-body">
+                            <span class="dome-year-pill">2025 - 2029</span>
+                            <h3 class="dome-degree-title">B.Tech in CSE (Full Stack)</h3>
+                            <p class="dome-institution">Rungta College of Engineering &amp; Technology</p>
+                            <div class="dome-metric-wrap">
+                                <span class="dome-metric-pill">8.98 CGPA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2: Higher Secondary (12th) -->
+                    <div class="liquid-glass-card edu-dome-card">
+                        <div class="dome-arch-badge">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <div class="dome-card-body">
+                            <span class="dome-year-pill">2024</span>
+                            <h3 class="dome-degree-title">Higher Secondary (12th)</h3>
+                            <p class="dome-institution">Swami Atmanand Govt. HSS Balpur, Chhattisgarh</p>
+                            <div class="dome-metric-wrap">
+                                <span class="dome-metric-pill">65.40%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3: Secondary School (10th) -->
+                    <div class="liquid-glass-card edu-dome-card">
+                        <div class="dome-arch-badge">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div class="dome-card-body">
+                            <span class="dome-year-pill">2022</span>
+                            <h3 class="dome-degree-title">Secondary School (10th)</h3>
+                            <p class="dome-institution">Govt. Higher Secondary School Balpur, Chhattisgarh</p>
+                            <div class="dome-metric-wrap">
+                                <span class="dome-metric-pill">82.40%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4: Diploma in Computer Applications (DCA) -->
+                    <div class="liquid-glass-card edu-dome-card">
+                        <div class="dome-arch-badge">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="dome-card-body">
+                            <span class="dome-year-pill">2024 - 2025</span>
+                            <h3 class="dome-degree-title">Diploma in Computer Apps (DCA)</h3>
+                            <p class="dome-institution">Aditya Computer Academy / CVRU</p>
+                            <div class="dome-metric-wrap">
+                                <span class="dome-metric-pill">87.50% Merit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ─── 08. PAGE 08 — CERTIFICATES & RECOGNITION ─── -->
+        <section id="certificates" class="section certificates-section" aria-label="Certificates and Credentials">
+            <div class="section-container">
+                <div class="liquid-section-heading">
+                    <div class="liquid-badge">
+                        <span class="badge-dot"></span>
+                        <span>CERTIFICATIONS</span>
+                    </div>
+                    <h2 class="liquid-title">Certificates &amp; Achievements</h2>
+                    <p class="liquid-subtitle">
+                        Some of my certifications, selections and achievements.
+                    </p>
+                </div>
+
+                <!-- Glass Gallery Carousel Stage (Reference Panel 7) -->
+                <div class="cert-gallery-stage-wrap">
+                    <button type="button" class="liquid-nav-arrow arrow-left" id="cert-prev-btn" aria-label="Previous certificate">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="cert-gallery-viewport" id="cert-gallery-viewport">
+                        <div class="cert-gallery-track" id="cert-gallery-track">
+
+                            <!-- Cert 1: Open Source India 2026 -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal"><i class="fa-solid fa-award"></i></div>
+                                        <div class="cert-paper-header">CERTIFICATE</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">Open Source India 2026</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">Open Source India 2026</h3>
+                                    <p class="cert-card-sub">Contributor • 2026</p>
+                                </div>
+                            </div>
+
+                            <!-- Cert 2: ICPC Asia West 2026 -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal gold"><i class="fa-solid fa-trophy"></i></div>
+                                        <div class="cert-paper-header">AMBASSADOR</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">ICPC Asia West 2026</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">ICPC Asia West 2026</h3>
+                                    <p class="cert-card-sub">Ambassador • 2026</p>
+                                </div>
+                            </div>
+
+                            <!-- Cert 3: NSoC 2026 -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal"><i class="fa-solid fa-shield-halved"></i></div>
+                                        <div class="cert-paper-header">SELECTION</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">Project Admin • NSoC 2026</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">NSoC 2026</h3>
+                                    <p class="cert-card-sub">Project Admin • 2026</p>
+                                </div>
+                            </div>
+
+                            <!-- Cert 4: InAmigos Foundation -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal purple"><i class="fa-solid fa-palette"></i></div>
+                                        <div class="cert-paper-header">INTERNSHIP</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">Graphic Designing Intern</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">InAmigos Foundation</h3>
+                                    <p class="cert-card-sub">Graphic Designing Intern • 2026</p>
+                                </div>
+                            </div>
+
+                            <!-- Cert 5: Google Cloud AI -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal"><i class="fa-brands fa-google"></i></div>
+                                        <div class="cert-paper-header">COMPLETION</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">Introduction to AI</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">Introduction to AI</h3>
+                                    <p class="cert-card-sub">Google Cloud • 2025</p>
+                                    <a href="https://coursera.org/share/8f4b6ddf88866b38db20ffa0509cfcf5" target="_blank" rel="noopener noreferrer" class="cert-inline-verify">Verify ➔</a>
+                                </div>
+                            </div>
+
+                            <!-- Cert 6: University of Michigan C -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal"><i class="fa-solid fa-code"></i></div>
+                                        <div class="cert-paper-header">SPECIALIZATION</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">Programming in C</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">Programming in C</h3>
+                                    <p class="cert-card-sub">Univ of Michigan • 2025</p>
+                                    <a href="https://coursera.org/share/2eaf57d960e4f20a06ca9af4862860cb" target="_blank" rel="noopener noreferrer" class="cert-inline-verify">Verify ➔</a>
+                                </div>
+                            </div>
+
+                            <!-- Cert 7: IBM HTML, CSS & JavaScript -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal"><i class="fa-solid fa-globe"></i></div>
+                                        <div class="cert-paper-header">VERIFIED</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">HTML, CSS, &amp; JS</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">Web Development</h3>
+                                    <p class="cert-card-sub">IBM • 2025</p>
+                                    <a href="https://coursera.org/share/f9907cb0c734cbfab890ec7d42f08de6" target="_blank" rel="noopener noreferrer" class="cert-inline-verify">Verify ➔</a>
+                                </div>
+                            </div>
+
+                            <!-- Cert 8: HackerRank Java -->
+                            <div class="liquid-glass-card cert-glass-card">
+                                <div class="cert-preview-window">
+                                    <div class="cert-mini-paper">
+                                        <div class="cert-paper-seal"><i class="fa-brands fa-hackerrank"></i></div>
+                                        <div class="cert-paper-header">SKILL BADGE</div>
+                                        <div class="cert-paper-name">HARSHAL KURREY</div>
+                                        <div class="cert-paper-sub">Java (Basic)</div>
+                                    </div>
+                                </div>
+                                <div class="cert-glass-meta">
+                                    <h3 class="cert-card-title">Java Basic</h3>
+                                    <p class="cert-card-sub">HackerRank • 2026</p>
+                                    <a href="https://www.hackerrank.com/certificates/CC78A847DF36" target="_blank" rel="noopener noreferrer" class="cert-inline-verify">Verify ➔</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="liquid-nav-arrow arrow-right" id="cert-next-btn" aria-label="Next certificate">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Pagination indicator dots -->
+                <div class="cert-gallery-dots-row" id="cert-dots-row">
+                    <span class="gallery-dot active" data-idx="0"></span>
+                    <span class="gallery-dot" data-idx="1"></span>
+                    <span class="gallery-dot" data-idx="2"></span>
+                    <span class="gallery-dot" data-idx="3"></span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ─── 09. PAGE 09 — CREATIVE LAB ─── -->
+        <section id="creativelab" class="section creativelab-section" aria-label="Creative Lab Playground">
+            <div class="section-container">
+                <div class="section-heading-block">
+                    <div class="section-tag">
+                        <i class="fa-solid fa-flask"></i>
+                        <span>08 // CREATIVE LAB</span>
+                    </div>
+                    <h2 class="section-title">
+                        IDEAS BEYOND<br>
+                        <span class="gradient-text">CODE</span>
+                    </h2>
+                    <p class="section-desc">
+                        An experimental playground for interactive visual algorithms, creative coding widgets, and digital interface experiments.
+                    </p>
+                </div>
+
+                <div class="experiments-grid">
+
+                    <!-- Experiment 1: Interactive Particle Constellation -->
+                    <div class="experiment-card" id="exp-particles">
+                        <div class="exp-header">
+                            <span class="exp-badge">Interactive Canvas</span>
+                            <h3 class="exp-title">3D Particle Constellation</h3>
+                            <p class="exp-desc">Move your cursor to attract and repel the cosmic particle cluster.</p>
+                        </div>
+                        <div class="exp-canvas-box">
+                            <canvas id="particle-lab-canvas"></canvas>
+                        </div>
+                        <div class="exp-controls">
+                            <button type="button" class="exp-btn" id="btn-reset-particles"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                            <button type="button" class="exp-btn" id="btn-toggle-gravity"><i class="fa-solid fa-magnet"></i> Invert Gravity</button>
+                        </div>
+                    </div>
+
+                    <!-- Experiment 2: Holographic 3D Glass Card Tilt -->
+                    <div class="experiment-card" id="exp-card-tilt">
+                        <div class="exp-header">
+                            <span class="exp-badge">CSS 3D Physics</span>
+                            <h3 class="exp-title">Holographic Cyber Pass</h3>
+                            <p class="exp-desc">Hover and drag across the card for realistic 3D gyroscopic tilt and sheen.</p>
+                        </div>
+                        <div class="exp-interactive-stage">
+                            <div class="holo-card" id="holo-card">
+                                <div class="holo-shine"></div>
+                                <div class="holo-content">
+                                    <div class="holo-top">
+                                        <span class="holo-chip"></span>
+                                        <span class="holo-logo">HK // 2.0</span>
+                                    </div>
+                                    <div class="holo-number">4029 ···· ···· 2026</div>
+                                    <div class="holo-bottom">
+                                        <div>
+                                            <span class="h-label">ACCESS</span>
+                                            <span class="h-name">HARSHAL KURREY</span>
+                                        </div>
+                                        <div class="holo-tier">EXPLORER // ∞</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiment 3: Interactive Cyber Terminal -->
+                    <div class="experiment-card" id="exp-terminal-widget">
+                        <div class="exp-header">
+                            <span class="exp-badge">Command Sandbox</span>
+                            <h3 class="exp-title">Interactive Cyber Terminal</h3>
+                            <p class="exp-desc">Type commands like <code>help</code>, <code>skills</code>, <code>hire</code>, <code>clear</code> below.</p>
+                        </div>
+                        <div class="lab-terminal-body" id="lab-terminal-output">
+                            <div class="lab-term-line">System initialized. Type <span class="accent-text">'help'</span> for available commands.</div>
+                        </div>
+                        <form class="lab-terminal-input-bar" id="lab-term-form">
+                            <span class="lab-term-prompt">visitor@hk:~$</span>
+                            <input type="text" id="lab-term-input" class="lab-term-input" placeholder="Type a command..." autocomplete="off">
+                            <button type="submit" class="lab-term-btn" aria-label="Submit terminal command"><i class="fa-solid fa-terminal"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Experiment 4: Matrix Digital Stream Rain -->
+                    <div class="experiment-card" id="exp-matrix">
+                        <div class="exp-header">
+                            <span class="exp-badge">Procedural Code</span>
+                            <h3 class="exp-title">Matrix Cryptographic Stream</h3>
+                            <p class="exp-desc">Procedural falling katakana & binary glyph matrix.</p>
+                        </div>
+                        <div class="exp-canvas-box matrix-box">
+                            <canvas id="matrix-canvas"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ─── 10. PAGE 10 — CONTACT ─── -->
+        <section id="contact" class="section contact-section" aria-label="Contact">
+            <div class="section-container">
+                <div class="liquid-section-heading">
+                    <div class="liquid-badge">
+                        <span class="badge-dot"></span>
+                        <span>GET IN TOUCH</span>
+                    </div>
+                    <h2 class="liquid-title">Let's Connect</h2>
+                    <p class="liquid-subtitle">
+                        Open to collaborations, internships, and interesting opportunities.
+                    </p>
+                </div>
+
+                <!-- Liquid Glass Contact Grid (Reference Panel 8) -->
+                <div class="liquid-contact-grid">
+                    <!-- Left: Contact Details & Socials -->
+                    <div class="contact-info-col">
+                        <div class="contact-info-stack">
+
+                            <!-- Email card -->
+                            <a href="mailto:rahulkurrey321@gmail.com" class="liquid-glass-card contact-pill-card">
+                                <div class="c-pill-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="c-pill-body">
+                                    <span class="c-pill-label">Email</span>
+                                    <span class="c-pill-val">rahulkurrey321@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <!-- Location card -->
+                            <div class="liquid-glass-card contact-pill-card">
+                                <div class="c-pill-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="c-pill-body">
+                                    <span class="c-pill-label">Location</span>
+                                    <span class="c-pill-val">Sardhabhata, Chhattisgarh</span>
+                                    <span class="c-pill-sub">Usually within 24 hours</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Social Icons Row -->
+                        <div class="contact-social-icons-row">
+                            <a href="https://github.com/harshalkurrey" target="_blank" rel="noopener noreferrer" class="contact-glass-icon-btn" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/harshal-kurrey" target="_blank" rel="noopener noreferrer" class="contact-glass-icon-btn" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/Harshalkurrey" target="_blank" rel="noopener noreferrer" class="contact-glass-icon-btn" aria-label="Twitter X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/harshal.kurrey" target="_blank" rel="noopener noreferrer" class="contact-glass-icon-btn" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Liquid Glass Contact Form -->
+                    <div class="contact-form-col">
+                        <div class="liquid-glass-card contact-form-glass-panel">
+                            <form class="liquid-form" id="contact-form" novalidate>
+                                <div class="liquid-field-group">
+                                    <div class="liquid-input-wrap">
+                                        <i class="fa-solid fa-user input-icon"></i>
+                                        <input type="text" id="contact-name" name="name" class="liquid-input" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+
+                                <div class="liquid-field-group">
+                                    <div class="liquid-input-wrap">
+                                        <i class="fa-solid fa-envelope input-icon"></i>
+                                        <input type="email" id="contact-email" name="email" class="liquid-input" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+
+                                <div class="liquid-field-group">
+                                    <div class="liquid-input-wrap textarea-wrap">
+                                        <i class="fa-solid fa-comment-dots input-icon"></i>
+                                        <textarea id="contact-message" name="message" class="liquid-input liquid-textarea" rows="4" placeholder="Your Message" required></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-liquid-submit" id="btn-submit-contact">
+                                    <span>Send Message</span>
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+
+                                <div class="contact-feedback" id="contact-feedback" role="alert" aria-live="polite"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <span class="hk-symbol-small">HK</span>
+                    <span class="footer-title">HARSHAL KURREY</span>
+                </div>
+                <p class="footer-tagline">Beyond The Interface · Crafted with passion & code.</p>
+            </div>
+
+            <div class="footer-center">
+                <div class="time-widget" id="time-widget">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="current-ist-time">--:--:-- IST</span>
+                    <span class="status-online">Available for 2026 roles</span>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Back to Top">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Harshal Kurrey. All rights reserved. Open-source portfolio.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
